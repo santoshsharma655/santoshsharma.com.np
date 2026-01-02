@@ -1,0 +1,527 @@
+.my {
+  width: 100%;        /* div screen अनुसार फैलियोस् */
+  max-width: 400px;   /* PC मा too big नभओस् */
+
+}
+
+.my img {
+  width: 43%;        /* image div अनुसार fit होस् */
+  height: auto;       /* aspect ratio maintain */
+  display: block;     /* extra space हटाउँछ */
+  border-radius: 12px; /* optional, rounded look */
+  object-fit: cover;  /* image stretched भए पनि cover होस् */
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-evenly ;   /* links center मा राख्ने */
+  gap: 1;                 /* links बीच gap */
+  overflow-x: auto;      /* screen सानो भए scroll आउँछ */
+  padding: 1rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color:#36346b;
+  font-size: 2.5rem;
+  white-space: nowrap;       /* links break नहोस् */
+  padding: 0rem 1rem;
+border-radius:0.7rem;
+transition: color 5s                           ease-in-out;
+
+}
+
+nav a:hover {
+  	background-color:#014509;
+}
+
+/* optional small devices font adjustment */
+@media (max-width: 480px) {
+  nav a {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+.cert{
+color: #000000;
+margin-left:2rem;
+}
+
+.achievement{
+  width: 100%;
+  margin: auto;
+}
+
+.achievement img{
+  width: 100%;        /* device अनुसार width */
+  height: auto;       /* image बिग्रिँदैन */
+  display: block;
+  border-radius: 10px;
+}
+.follow-us{
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.follow-us h3{
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.social-icons a{
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.social-icons a img{
+  width: 40px;
+  height: 40px;
+}
+
+.social-icons a:hover{
+  transform: scale(1.2);
+}
+.login-btn{
+  position: fixed;
+  top: 5rem;
+  right: 1rem;
+
+  padding: clamp(0.4rem, 1vw, 0.7rem)
+           clamp(0.8rem, 2vw, 1.2rem);
+
+  font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+
+  background: #23014a;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+
+}
+.login-btn:hover{
+	background-color:#0f7002;
+}
+.foot{
+	text-align:center;
+	color:#9a9c9a;
+}
+/* MODAL */
+.modal{
+  display: none;        /* 🔑 default बन्द */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box{
+  width: 90%;
+  max-width: 22rem;
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 0.6rem;
+}
+
+.modal-box input{
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
+#enterBtn{
+  width: 100%;
+  padding: 0.6rem;
+  background: #198754;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+.close{
+  float: right;
+  cursor: pointer;
+}
+
+#msg{
+  text-align: center;
+  margin-top: 0.5rem;
+}
+/* Services */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+gap: 0.625rem; 
+  justify-content: center;
+}
+
+.service-card {
+  background-color: #ffffff;
+border: 0.0625rem solid #ddd;      
+padding: 1.15rem;   
+width: 17.5rem;            
+border-radius: 0.75rem;       
+box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.05); 
+}
+
+.service-card h4 {
+margin-bottom: 0.625rem;
+  color: #005792;
+}.lifestyle-card {
+  border: 0.0625rem solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.05);
+}
+
+.full-text { 
+display: none; }
+
+.read-more-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.read-more-btn:hover { 
+background-color: #45a049; 
+}
+.snova-ai {
+  max-width: 80%;
+  margin: auto;
+  padding: 2rem 1rem;
+  background:#77bd4a;
+  border-radius: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Title */
+.ai-title {
+ font-size: clamp(1.3rem, 3vw, 1.8rem);
+  margin-bottom: 1rem;
+}
+
+/* AI Working Text */
+.ai-working {
+   font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: 1.5rem;
+}
+
+.ai-working span {
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+/* Release Soon Animation */
+.release-soon {
+font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: bold;
+  color: #ffd700;
+  animation: glowMove 2s infinite ease-in-out;
+}
+
+/* Keyframes */
+@keyframes glowMove {
+  0% {
+    opacity: 0.3;
+    transform: translateY(5px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-5px);
+    text-shadow: 0 0 10px #ffd700;
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(5px);
+  }
+}
+
+/* Button */
+.qr-btn {
+  padding: 12px 25px;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ffcc00, #ff8800);
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+
+}
+.ai_qr {
+  display: flex;
+  flex-direction: column;   /* button माथि, form तल */
+  align-items: center;      /* stretch रोक्ने */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* Form */
+.qr-form {
+  display: none;
+  margin-top: 0.3rem;
+  padding: 1.5rem;
+    width: 100%;
+  max-width: 380px;   /* PC / laptop मा धेरै फैलिन नदिने */
+  background: #313632;
+  border-radius: 12px;
+}
+
+.qr-form h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.qr-form input {
+  width: 100%;
+  max-width: 380px;   /* PC / laptop मा धेरै फैलिन नदिने */
+  padding: 8px;
+  margin: 0 auto 8px; /* center मा राख्ने */
+  display: block;     /* auto margin काम गर्न */
+  border-radius: 6px;
+  border: none;
+  box-sizing: border-box;
+}
+
+
+.generate-btn {
+  width: 100%;
+  max-width: 14rem;              /* left–right बाट control */
+  padding: clamp(0.6rem, 2vw, 0.9rem);
+  background: #02a82e;
+  border: none;
+  color:#f5f7f5;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 0.75rem auto 0;        /* center मा */
+}
+
+
+/* QR */
+#qrResult {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#downloadQR {
+  display: none;
+  margin-top: 10px;
+  text-align: center;
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* General Button */
+.generate-btn {
+    padding: 10px 20px;
+    background: #025913;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  transition:0.3s;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.generate-btn:hover{
+  transform:scale(1.05);
+}
+
+/* Form Container */
+.bill-form-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    min-width: 300px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+/* Close Button */
+.close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+/* Form Fields */
+.bill-form-container input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+/* Particular Entry */
+.particular-entry {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.particular-entry input, .particular-entry button {
+    flex: 1 1 auto;
+}
+
+/* Table */
+#particularTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+#particularTable th, #particularTable td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+/* Bill Preview */
+#billPreviewContainer {
+    display: none;
+    text-align: center;
+    background-color: #fa0057;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 600px;
+    min-width: 280px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+#billCanvas {
+    width: 100%;
+    height: auto;
+    border: none;
+}
+#downloadBill {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #025913;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+#downloadBill:hover {
+    transform: scale(1.05); /* slightly bigger on hover */
+    background: #0505ff;      /* slightly darker green */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* subtle shadow */
+}
+
+/* Button */
+.sign-gen-btn{
+  padding:12px 22px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#000,#444);
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+  
+}
+.sign-gen-btn:hover{
+  transform:scale(1.05);
+}
+
+/* Panel */
+.sign-panel{
+  display:none;
+  margin-top:20px;
+  padding:20px;
+  border-radius:12px;
+  background:#f9f9f9;
+}
+
+/* Input */
+#signName{
+  width:100%;
+  padding:12px;
+  margin:15px 0;
+  font-size:16px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+/* Start Button */
+.start-btn{
+  display:block;
+  margin:0 auto 20px;
+  padding:12px 30px;
+  border:none;
+  border-radius:25px;
+  background:#000;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.start-btn:hover{
+  transform:scale(1.1);
+}
+
+/* Result Grid */
+.sign-results{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+/* Signature Card */
+.sign-card{
+  background:#fff;
+  padding:15px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Signature Text */
+.sign-text{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+/* Download Button */
+.download-btn{
+  padding:8px 18px;
+  border:none;
+  border-radius:20px;
+  background:#000;
+  color:#fff;
+  cursor:pointer;
+}
+

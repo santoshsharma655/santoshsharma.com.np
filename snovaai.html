@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>skills</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a> 
+      <a href="skills.html">Skills</a> 
+      <a href="snovaai.html">Snova Ai </a> 
+      <a href="dailyuse.html">Daily use</a> 
+      <a href="contactus.html">Contact Us</a>
+    </nav>
+  </header>
+<br> <br>
+<section class="snova-ai">
+  <h2 class="ai-title">SNOVA  AI  Assistant</h2>
+
+  <p class="ai-working">
+    On <span>Working</span>
+  </p>
+
+  <p class="release-soon">
+     Release Soon...
+  </p>
+</section>
+<br> <br>
+<section class="ai_qr">
+
+  <!-- Animated Button -->
+  <button class="qr-btn" onclick="openQRForm()">
+     AI QR Generator
+  </button>
+
+  <!-- QR Form -->
+  <div class="qr-form" id="qrForm">
+    <h3>Generate Your QR</h3>
+
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email (optional)">
+    <input type="tel" id="phone" placeholder="Phone Number">
+    <input type="text" id="blood" placeholder="Blood Group">
+    <input type="text" id="nation" placeholder="Nationality">
+    <input type="text" id="qual" placeholder="Qualification">
+    <input type="text" id="regno" placeholder="Registration No (optional)">
+    <input type="password" id="password" placeholder="Password (optional)">
+    <input type="date" id="dob">
+
+    <button class="generate-btn" onclick="generateQR()">Generate QR</button>
+
+    <!-- QR Output -->
+    <div id="qrResult"></div>
+
+    <a id="downloadQR" download="snova_qr.png">Download QR</a>
+  </div>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+<br> <br>
+
+<section id="snova-ai">
+    <button class="generate-btn" id="openFormBtn">Bill Generator</button>
+
+    <div class="bill-form-container" id="billFormContainer">
+        <span class="close-btn" id="closeFormBtn">&times;</span>
+        <h2>Bill Generator</h2>
+        <form id="billForm">
+            <label>Organization Name</label>
+            <input type="text" id="orgName" required>
+
+            <label>Address</label>
+            <input type="text" id="orgAddress" required>
+
+            <label>Bill No</label>
+            <input type="text" id="billNo" required>
+
+            <label>Mobile No</label>
+            <input type="text" id="mobileNo" required>
+
+            <label>Date</label>
+            <input type="date" id="billDate" required>
+
+            <label>Received From</label>
+            <input type="text" id="receivedFrom" required>
+
+            <label>Received Address</label>
+            <input type="text" id="receivedAddress" required>
+
+            <label>Discount (Optional)</label>
+            <input type="number" id="discount" value="0">
+
+            <h3>Particulars</h3>
+            <div class="particular-entry">
+                <input type="text" id="particularInput" placeholder="Particular">
+                <input type="number" id="amountInput" placeholder="Amount">
+                <button type="button" id="addRowBtn">Add</button>
+            </div>
+
+            <table id="particularTable">
+                <thead>
+                    <tr>
+                        <th>SN</th>
+                        <th>Particular</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <button type="button" id="generateBtn">Generate Bill</button>
+        </form>
+    </div>
+
+    <div id="billPreviewContainer">
+        <canvas id="billCanvas"></canvas>
+        <button id="downloadBill">Download Bill</button>
+    </div>
+</section>
+
+<br> <br>
+
+<!-- SNOVA AI SIGN GENERATOR -->
+<button id="openSignGen" class="sign-gen-btn">
+   Sign Generator
+</button>
+
+<!-- SIGN GENERATOR PANEL -->
+<div id="signPanel" class="sign-panel">
+  <h2> AI Signature Generator</h2>
+
+  <input type="text" id="signName" placeholder="Enter your name">
+
+  <button id="generateSign" class="start-btn">
+    Start Generating
+  </button>
+
+  <!-- SIGNATURE OUTPUT -->
+  <div id="signResults" class="sign-results"></div>
+</div>
+
+
+
+
+<br>
+<div class="follow-us">
+  <h3>Follow Us</h3>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/santosh.sharma.647208" target="_blank">
+      <img src="facebook.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/santosh_sharma_offical?igsh=dXRmdWh1aHc1Ynk4" target="_blank">
+      <img src="insta.jpg" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@tm_killer4?_r=1&_t=ZS-92NBMLyyn8J" target="_blank">
+      <img src="tiktok.png" alt="Tik Tok">
+    </a>
+  </div>
+</div>
+
+    <footer class="foot">
+    <p> &copy; 2025 Santosh Sharma. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
